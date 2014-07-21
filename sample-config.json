@@ -1,0 +1,32 @@
+{
+	"emailConfig": {
+		"host": "smtp.gmail.com",
+		"user": "test",
+		"pass": "test",
+		"port": 465,
+		"enabled": true
+	},
+	"watchedDirectories": [
+		{
+			"path": "/usr/test/path/to/folder",
+			"failureNotify": "test-notify@gmail.com",
+			"ignore": ["result", "processed"],
+			"extensions": [
+				{
+					"extension": "xls",
+					"endpoint": {
+						"url": "http://process-xls.com/upload/$FILENAME",
+						"user": "test",
+						"pass": "test"
+					}
+				},
+				{
+					"extension": "json",
+					"endpoint": {
+						"url": "http://process-json.com/upload/$FILENAME"
+					}
+				}
+			]
+		}	
+	]
+}
